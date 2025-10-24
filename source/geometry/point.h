@@ -22,6 +22,3 @@ struct pt {
     }
 };
 
-ld angle(pt p1, pt p2) {
-    return std::abs(atan2(p1 ^ p2, p1 * p2));
-}
