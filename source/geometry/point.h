@@ -10,6 +10,7 @@ struct pt {
     ld len() { return sqrtl(len2()); }
     ll len2() { return x * x + y * y; }
     ll manhat_len() { return abs(x) + abs(y); }
+    ll hp_pos() { return (y > 0 || (y == 0 && x >= 0)) ? 1 : -1; }
     ll operator*(pt p) { return x * p.x + y * p.y; }
     ll operator^(pt p) { return x * p.y - y * p.x; }
     pt operator+(pt p) { return pt(p.x + x, p.y + y); }
@@ -21,4 +22,3 @@ struct pt {
         return out << p.x << ' ' << p.y;
     }
 };
-
